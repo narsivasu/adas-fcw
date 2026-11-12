@@ -20,4 +20,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: report-${{ matrix.python-version }}
-          path: report.xml
+          path: report.xml          
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Building the app"
