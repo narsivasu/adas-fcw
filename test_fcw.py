@@ -1,3 +1,4 @@
+import sys
 from fcw import time_to_collision, warning_level
 
 def test_ok():
@@ -8,3 +9,5 @@ def test_warn():
 
 def test_brake():
     assert warning_level(time_to_collision(20, 30, 10)) == "BRAKE"
+def test_python():
+    assert sys.version_info>=(3,12)
