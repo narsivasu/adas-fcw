@@ -1,6 +1,11 @@
 name: CI
 on:
-   workflow_dispatch:
+   push:
+    branches: 
+     - narsivasu-patch-1
+   pull_request:
+      branches:
+        main
 jobs :
    test :
        runs-on: ubuntu-latest
