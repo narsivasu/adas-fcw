@@ -16,7 +16,7 @@ jobs :
    build:
         runs-on: ubuntu-latest
         needs: test
-        if: github.ref
+        if: github.ref == "ref/heads/narsi-safe"
         steps:
          - run : echo "test is completed"
                
