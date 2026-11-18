@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Create package
-        run: zip adas-fcw-$APP_VERSION.zip is_safe.py
+        run: zip adas-fcw-$APP_VERSION.zip fcw.py
       - name: Save package
         uses: actions/upload-artifact@v4
         with:
